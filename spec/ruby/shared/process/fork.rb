@@ -13,7 +13,7 @@ describe :process_fork, shared: true do
   end
 
   platform_is_not :windows do
-    not_supported_on :jruby do
+    not_supported_on :jruby, :truffleruby do
       before :each do
         @file = tmp('i_exist')
         rm_r @file

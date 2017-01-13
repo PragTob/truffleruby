@@ -1,5 +1,5 @@
 describe :socket_recv_nonblock, shared: true do
-  not_supported_on :jruby do
+  not_supported_on :jruby, :truffleruby do
     before :each do
       @s1 = Socket.new(Socket::AF_INET, Socket::SOCK_DGRAM, 0)
       @s2 = Socket.new(Socket::AF_INET, Socket::SOCK_DGRAM, 0)

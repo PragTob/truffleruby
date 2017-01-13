@@ -3,7 +3,7 @@ require File.expand_path('../fixtures/common', __FILE__)
 require File.expand_path('../shared/chroot', __FILE__)
 
 platform_is_not :windows do
-  not_supported_on :jruby do
+  not_supported_on :jruby, :truffleruby do
     as_superuser do
       describe "Dir.chroot as root" do
         it_behaves_like :dir_chroot_as_root, :chroot
